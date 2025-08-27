@@ -29,7 +29,7 @@ resource "aws_internet_gateway" "gw" {
 resource "aws_subnet" "public1" {
   vpc_id                  = aws_vpc.my-vpc.id
   cidr_block              = "172.120.1.0/24" // class c  254 ips 
-  availability_zone       = "us-east-2a"
+  availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true
   tags = {
     Name = "utc-public-sub1"
@@ -39,7 +39,7 @@ resource "aws_subnet" "public1" {
 resource "aws_subnet" "public2" {
   vpc_id                  = aws_vpc.my-vpc.id
   cidr_block              = "172.120.2.0/24" // class c  254 ips 
-  availability_zone       = "us-east-2b"
+  availability_zone       = "us-east-1b"
   map_public_ip_on_launch = true
   tags = {
     Name = "utc-public-sub2"
@@ -51,7 +51,7 @@ resource "aws_subnet" "public2" {
 resource "aws_subnet" "private1" {
   vpc_id            = aws_vpc.my-vpc.id
   cidr_block        = "172.120.3.0/24" // class c  254 ips 
-  availability_zone = "us-east-2a"
+  availability_zone = "us-east-1a"
   tags = {
     Name = "utc-private-sub1"
   }
@@ -60,7 +60,7 @@ resource "aws_subnet" "private1" {
 resource "aws_subnet" "private2" {
   vpc_id            = aws_vpc.my-vpc.id
   cidr_block        = "172.120.4.0/24" // class c  254 ips 
-  availability_zone = "us-east-2b"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "utc-private-sub2"
   }
